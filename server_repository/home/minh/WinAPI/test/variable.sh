@@ -1,0 +1,14 @@
+# bin/bash
+ 
+echo HOME : $HOME
+echo BASH : $BASH
+echo BASH_VERSION :  $BASH_VERSION
+echo COLUMNS : $COLUMNS
+echo LINES : $LINES
+echo LOGNAME : $LOGNAME
+echo OSTYPE : $OSTYPE
+echo PATH : $PATH
+echo PWD : $PWD
+echo SHELL : $SHELL
+echo USERNAME : $USERNAME
+

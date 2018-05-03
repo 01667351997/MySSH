@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/controllers/Server.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/model/ClientHandler.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/model/C_ProcessCommand.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/model/IProcessCommand.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/controller/C_Client.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/model/C_ClientSession.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/model/ProcessCommand.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/model/ClientSession.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/model/C_IProcessCommand.java</file>
+        </group>
+    </open-files>
+</project-private>
