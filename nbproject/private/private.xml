@@ -2,28 +2,20 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/conn/ClientSession.java</file>
-            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/conn/C_IProcessCommand.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/authentication/GenerateKeys.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/view/C_Client.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/trans/SetUpNetWorking.java</file>
-            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/conn/C_ClientSession.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/trans/C_SetUpNetWorking.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/authentication/RSAPairKeys.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/view/Server.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/conn/ProcessCommand.java</file>
-            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/authentication/Authentication.java</file>
-            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/trans/ServerConfig.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/conn/C_ProcessCommand.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/infomation/Clients.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/authentication/RSAUtil.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/conn/ClientHandler.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/conn/IProcessCommand.java</file>
         </group>
->>>>>>> c7f850760b96c474669009223eb50ccf0baad190
     </open-files>
 </project-private>

@@ -25,14 +25,15 @@ public class C_Client {
             System.out.print(user+"$ ");
             String[] cmd = scanner.nextLine().split(" ");
             if(cmd[0].equals("help")){
-                System.out.println("ssh [username]@[ip] : login");
-                System.out.println("------------------After login------------------");
-                System.out.println("ls                  : list directory contents");
-                System.out.println("cd [name_directory] : changing directory");
-                System.out.println("mv [source] [dest]  : move (rename) file");
-                System.out.println("rm [file_name]      : remove file or directories");
-                System.out.println("date                : print the system date and time");
-                System.out.println("");
+                System.out.println("ssh [username]@[ip]             : login");
+                System.out.println("--------------------------After login-------------------------------");
+                System.out.println("ls                              : list directory contents");
+                System.out.println("cd [name_directory]             : changing directory");
+                System.out.println("mv [source] [dest]              : move (rename) file");
+                System.out.println("rm [file_name]                  : remove file or directories");
+                System.out.println("date                            : print the system date and time");
+                System.out.println("exit                            : logout");
+                System.out.println("Note Broken pipe (Write failed) : time out socket close");
                 continue;
             }
             if(!check){
@@ -120,7 +121,7 @@ public class C_Client {
                         command.date();
                         break;
                     case "exit":
-                        System.out.println("Logout SSH !");
+                        System.out.println("Logout !");
                         flag=false;
                         break;
                     default :

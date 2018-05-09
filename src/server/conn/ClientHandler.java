@@ -3,6 +3,9 @@ package server.conn;
 import server.infomation.Clients;
 import java.io.*;
 import java.net.*;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  *
@@ -13,6 +16,7 @@ public class ClientHandler implements Runnable {
     ClientSession clientss = null;
     Clients clients = null;
     FileExe file;
+    long endTimeMillis = 0;
     public ClientHandler(Socket clientSocket, Clients clients) {
 
         try {
@@ -24,16 +28,39 @@ public class ClientHandler implements Runnable {
         }
 
     }
-
+    
     @Override
     public void run() {
+        Timer timer = new Timer();
         
-        // variable check is login success
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                // task to run goes here
+                System.out.println(clientss.getSock()+"Timer check active "+ new Date());
+                if ((System.currentTimeMillis() - endTimeMillis)>300000) {
+                    try {
+                        clientss.getReader().close();
+                        clientss.getWriter().close();
+                        clientss.getSock().close();
+                    } catch (IOException e) {
+                        System.err.println(e.getMessage());
+                    }
+                    
+                }
+            }
+        };
+
+        long delay = 10000;
+        long intevalPeriod = 60 * 1000; 
+        // schedules the task to be run in an interval 
+        timer.scheduleAtFixedRate(task, delay,intevalPeriod);
+            // variable check is login success
         boolean login = false;
 
         // Time out or try over 3 turn will be kick off
         while (true) {
-
+            endTimeMillis = System.currentTimeMillis();
             // This is place receive message
             String received = "";
             try {
@@ -87,7 +114,7 @@ public class ClientHandler implements Runnable {
             } else if (login && received.equals("mv")) {
                 cmd.mv();
             }
-
+            
             
 
         }
