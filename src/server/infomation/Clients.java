@@ -32,7 +32,6 @@ public class Clients {
 
     public synchronized void disconnect() {
         
-        System.out.println("Have client disconnect! ");
         CurrentConnect--;
     }
 

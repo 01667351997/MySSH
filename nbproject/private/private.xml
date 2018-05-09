@@ -11,9 +11,11 @@
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/authentication/RSAPairKeys.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/view/Server.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/conn/ProcessCommand.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/authentication/Authentication.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/clients/conn/C_ProcessCommand.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/infomation/Clients.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/authentication/RSAUtil.java</file>
+            <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/trans/WriteLog.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/conn/ClientHandler.java</file>
             <file>file:/home/binhminh/NetBeansProjects/MySSH/src/server/conn/IProcessCommand.java</file>
         </group>

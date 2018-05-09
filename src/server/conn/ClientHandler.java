@@ -6,6 +6,9 @@ import java.net.*;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import server.trans.WriteLog;
 
 /**
  *
@@ -16,10 +19,12 @@ public class ClientHandler implements Runnable {
     ClientSession clientss = null;
     Clients clients = null;
     FileExe file;
+    Logger log;
     long endTimeMillis = 0;
-    public ClientHandler(Socket clientSocket, Clients clients) {
+    public ClientHandler(Socket clientSocket, Clients clients,Logger log) {
 
         try {
+            this.log=log;
             this.clients = clients;
             clientss = new ClientSession(clientSocket);
             file = new FileExe();
@@ -37,7 +42,9 @@ public class ClientHandler implements Runnable {
             @Override
             public void run() {
                 // task to run goes here
-                System.out.println(clientss.getSock()+"Timer check active "+ new Date());
+                log.info(String.format("%10s %10s %10s",new Date()," Timer check active ",clientss.getSock()));
+                
+                
                 if ((System.currentTimeMillis() - endTimeMillis)>300000) {
                     try {
                         clientss.getReader().close();
@@ -57,7 +64,7 @@ public class ClientHandler implements Runnable {
         timer.scheduleAtFixedRate(task, delay,intevalPeriod);
             // variable check is login success
         boolean login = false;
-
+        
         // Time out or try over 3 turn will be kick off
         while (true) {
             endTimeMillis = System.currentTimeMillis();
@@ -65,10 +72,12 @@ public class ClientHandler implements Runnable {
             String received = "";
             try {
                 if ((received = clientss.getReader().readUTF()) != null) {
-                    System.out.println(clientss.getSock() + " command: " + received);
+                    log.info(String.format("%10s %10s %10s", new Date()," Command: "+ received, clientss.getSock()));
+                    
                 }
             } catch (IOException ex) {
                 System.err.println(ex.getMessage());
+                log.info("Have client disconnect "+clientss.getSock());
                 clients.disconnect();
                 break;
             }
@@ -93,7 +102,7 @@ public class ClientHandler implements Runnable {
                     }
                     break;
                 }else{
-                    System.out.println(clientss.getSock()+" connect success!");
+                    log.info(String.format("%10s %10s %10s",new Date()," connect success!",clientss.getSock()));
                     
                     // Dem da tang client connect
                     clients.connect();
@@ -117,8 +126,8 @@ public class ClientHandler implements Runnable {
             
             
 
-        }
-
-    }// end while
-
+        }// end while
+        timer.cancel();
+    }// end run
+    
 }

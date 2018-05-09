@@ -4,6 +4,7 @@ package server.authentication;
 
 import java.io.*;
 import java.security.*;
+import java.util.Date;
 /**
  *
  * @author binhminh
@@ -51,7 +52,7 @@ public class GenerateKeys {
             this.createKeys();
             this.writeToFile(PUBLIC_KEY_FILE, this.getPublicKey().getEncoded());
             this.writeToFile(PRIVATE_KEY_FILE, this.getPrivateKey().getEncoded());
-            System.out.println("key Generated! ");
+            System.out.println(String.format("%10s %10s", new Date()," key Generated! "));
         }catch(IOException e){
             System.err.println(e.getMessage());
         }

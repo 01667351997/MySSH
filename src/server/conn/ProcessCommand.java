@@ -8,6 +8,7 @@ import java.security.NoSuchProviderException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Logger;
 import server.authentication.GenerateKeys;
 import server.authentication.RSAPairKeys;
 import server.authentication.RSAUtil;
@@ -19,11 +20,13 @@ import server.authentication.RSAUtil;
 public class ProcessCommand implements IProcessCommand{
     private final FileExe nDirec;
     private final ClientSession client;
+    
     public ProcessCommand(ClientSession client,FileExe nDirec){
         this.client = client;
         this.nDirec = nDirec;
+       
     }
-
+    
     /**
      *
      * @return
