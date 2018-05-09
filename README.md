@@ -8,6 +8,7 @@ Chương trình mô phỏng ssh để client kết nối đến server thực hi
 # Các Lệnh thực hiện:
 + Hiển thị thư mục
 + In danh sách các tệp
++ Thoát
 + Thư mục trong thư mục hiện thời
 + xóa, di chuyển tệp thư mục	
 + hiển thị ngày giờ hệ thống
