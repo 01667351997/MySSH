@@ -31,6 +31,8 @@ public class C_Client {
                 System.out.println("cd [name_directory]             : changing directory");
                 System.out.println("mv [source] [dest]              : move (rename) file");
                 System.out.println("rm [file_name]                  : remove file or directories");
+                System.out.println("mkdir [directory_name]          : create directory");
+                System.out.println("touch [file_name]               : create file");
                 System.out.println("date                            : print the system date and time");
                 System.out.println("exit                            : logout");
                 System.out.println("Note Broken pipe (Write failed) : time out socket close");
@@ -104,6 +106,21 @@ public class C_Client {
                         break;
                     case "ls":
                         command.ls();
+                        break;
+                    case "mkdir":
+                        if(cmd.length==2){
+                            if(!command.mkdir(cmd[1])){
+                                System.err.println("Cannot create directory: "+cmd[1]);
+                            }
+                        }
+                        
+                        break;
+                    case "touch":
+                        if(cmd.length==2){
+                            if(!command.touch(cmd[1])){
+                                System.err.println("Cannot create file: "+cmd[1]);
+                            }
+                        }
                         break;
                     case "rm":
                         if(!command.rm(cmd[1])){

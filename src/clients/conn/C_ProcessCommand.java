@@ -175,6 +175,52 @@ public class C_ProcessCommand implements C_IProcessCommand{
         return flag.booleanValue();
     }
     
+    public boolean mkdir(String dest) {
+        Boolean flag;
+        try {
+            // thuc hien lenh cd
+            clientss.getWriter().writeUTF("mkdir");
+            clientss.getWriter().flush();
+            
+            // Send destination 
+            clientss.getWriter().writeObject(dest);
+            clientss.getWriter().flush();
+            
+            // keep read untill get message
+            
+            flag = (Boolean) clientss.getReader().readObject();
+            
+            
+        } catch (ClassNotFoundException | IOException ex) {
+            System.err.println(ex.getMessage());
+            return false;
+        }
+        return flag.booleanValue();
+    }
+    
+    public boolean touch(String dest) {
+        Boolean flag;
+        try {
+            // thuc hien lenh cd
+            clientss.getWriter().writeUTF("touch");
+            clientss.getWriter().flush();
+            
+            // Send destination 
+            clientss.getWriter().writeObject(dest);
+            clientss.getWriter().flush();
+            
+            // keep read untill get message
+            
+            flag = (Boolean) clientss.getReader().readObject();
+            
+            
+        } catch (ClassNotFoundException | IOException ex) {
+            System.err.println(ex.getMessage());
+            return false;
+        }
+        return flag.booleanValue();
+    }
+    
     
 
 }

@@ -9,6 +9,10 @@ public interface C_IProcessCommand {
     public boolean login(String user, String pass);
     
     public boolean cd(String dest);
+    
+    public boolean mkdir(String dest);
+    
+    public boolean touch(String dest);
 
     public boolean pwd();
 

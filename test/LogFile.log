@@ -1,14 +1,24 @@
-May 10, 2018 1:47:32 AM server.trans.SetUpNetWorking connectNetWorking
+May 10, 2018 7:28:51 AM server.trans.SetUpNetWorking connectNetWorking
 INFO: Networking is setup done!
-May 10, 2018 1:47:46 AM server.trans.SetUpNetWorking connectNetWorking
+May 10, 2018 7:29:05 AM server.trans.SetUpNetWorking connectNetWorking
 INFO: Number of clients: 1
-May 10, 2018 1:47:46 AM server.conn.ClientHandler run
-INFO: Thu May 10 01:47:46 ICT 2018  Command: login Socket[addr=/127.0.0.1,port=46132,localport=5000]
-May 10, 2018 1:47:47 AM server.conn.ClientHandler run
-INFO: Thu May 10 01:47:47 ICT 2018  connect success! Socket[addr=/127.0.0.1,port=46132,localport=5000]
-May 10, 2018 1:47:50 AM server.conn.ClientHandler run
-INFO: Thu May 10 01:47:50 ICT 2018  Command: ls Socket[addr=/127.0.0.1,port=46132,localport=5000]
-May 10, 2018 1:47:52 AM server.conn.ClientHandler run
-INFO: Thu May 10 01:47:52 ICT 2018  Command: cd Socket[addr=/127.0.0.1,port=46132,localport=5000]
-May 10, 2018 1:47:56 AM server.conn.ClientHandler run
-INFO: Have client disconnect Socket[addr=/127.0.0.1,port=46132,localport=5000]
+May 10, 2018 7:29:05 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:05 ICT 2018  Command: login Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:05 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:05 ICT 2018  connect success! Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:10 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:10 ICT 2018  Command: ls Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:15 AM server.conn.ClientHandler$1 run
+INFO: Thu May 10 07:29:15 ICT 2018  Timer check active  Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:16 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:16 ICT 2018  Command: touch Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:17 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:17 ICT 2018  Command: ls Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:25 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:25 ICT 2018  Command: touch Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:50 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:50 ICT 2018  Command: ls Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:53 AM server.conn.ClientHandler run
+INFO: Thu May 10 07:29:53 ICT 2018  Command: cd Socket[addr=/127.0.0.1,port=46176,localport=5000]
+May 10, 2018 7:29:56 AM server.conn.ClientHandler run
+INFO: Have client disconnect Socket[addr=/127.0.0.1,port=46176,localport=5000]

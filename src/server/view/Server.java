@@ -1,6 +1,9 @@
 package server.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import server.trans.SetUpNetWorking;
 
 /**
@@ -9,7 +12,7 @@ import server.trans.SetUpNetWorking;
  */
 public class Server {
     
-    public void go(){
+    public void go() throws IOException{
         System.out.println("SSH Server");
         
         Scanner input = new Scanner(System.in);
@@ -28,6 +31,10 @@ public class Server {
     
     public static void main(String[] args) {
         Server server = new Server();
-        server.go();
+        try {
+            server.go();
+        } catch (IOException ex) {
+            System.err.println(ex.getMessage());
+        }
     }
 }

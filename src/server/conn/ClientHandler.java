@@ -122,6 +122,10 @@ public class ClientHandler implements Runnable {
                 cmd.rm();
             } else if (login && received.equals("mv")) {
                 cmd.mv();
+            } else if (login && received.equals("mkdir")) {
+                cmd.mkdir();
+            } else if (login && received.equals("touch")) {
+                cmd.touch();
             }
             
             

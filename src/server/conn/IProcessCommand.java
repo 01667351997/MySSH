@@ -11,6 +11,10 @@ public interface IProcessCommand {
     
     public boolean cd();
     
+    public boolean mkdir();
+    
+    public boolean touch();
+    
     public boolean pwd();
 
     public boolean ls();

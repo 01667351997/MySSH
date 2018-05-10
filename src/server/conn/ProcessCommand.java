@@ -180,9 +180,9 @@ public class ProcessCommand implements IProcessCommand{
             String dest = client.getReader().readObject().toString();
             String path = "server_repository"
                     +nDirec.getRoot_directory()+nDirec.getCurrent_directory();
-            File oldFile = new File(path+"/"+ src);
+            File oldFile = new File(path+File.separator+ src);
             
-            oldFile.renameTo(new File(path+"/"+dest+"/"+src));
+            oldFile.renameTo(new File(path+File.separator+dest+File.separator+src));
             
             
             client.getWriter().writeObject(false);
@@ -220,7 +220,7 @@ public class ProcessCommand implements IProcessCommand{
             for(File file : files){
                 if(file.isDirectory()){
                     if(dest.trim().equals(file.getName())){
-                        nDirec.setRoot_directory(nDirec.getRoot_directory()+nDirec.getCurrent_directory()+"/");
+                        nDirec.setRoot_directory(nDirec.getRoot_directory()+nDirec.getCurrent_directory()+File.separator);
                         nDirec.setCurrent_directory(dest);
                         client.getWriter().writeObject(true);
                         return true;
@@ -228,6 +228,54 @@ public class ProcessCommand implements IProcessCommand{
                 }
             }
             client.getWriter().writeObject(false);
+        } catch (ClassNotFoundException | IOException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return false;
+    }
+    
+    public boolean mkdir() {
+        try {
+            String dest = client.getReader().readObject().toString();
+            if(dest.equals("..")){
+                client.getWriter().writeObject(false);
+                return false;
+                
+            }
+            File currentDir = new File("server_repository"+nDirec.getRoot_directory()+nDirec.getCurrent_directory()+File.separator+dest);
+            boolean isCreated = currentDir.mkdir();
+            if (isCreated) {
+                client.getWriter().writeObject(true);
+                return true;
+            } else { //Directory may already exist
+                client.getWriter().writeObject(false);
+                return false;
+            }
+            
+        } catch (ClassNotFoundException | IOException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return false;
+    }
+    
+    
+    public boolean touch() {
+        try {
+            String dest = client.getReader().readObject().toString();
+            if(!dest.contains(".")){
+                client.getWriter().writeObject(false);
+                return false;
+                
+            }
+            File currentDir = new File("server_repository"+nDirec.getRoot_directory()+nDirec.getCurrent_directory()+File.separator+dest);
+            boolean isCreated = currentDir.createNewFile();
+            if (isCreated) {
+                client.getWriter().writeObject(true);
+                return true;
+            } else { //Directory may already exist
+                client.getWriter().writeObject(false);
+                return false;
+            }
         } catch (ClassNotFoundException | IOException ex) {
             System.err.println(ex.getMessage());
         }
